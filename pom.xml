@@ -29,7 +29,7 @@
     <groupId>io.confluent</groupId>
     <artifactId>common</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-q2</version>
+    <version>1.0-q5</version>
     <name>common</name>
     <organization>
         <name>Confluent, Inc.</name>
@@ -63,19 +63,18 @@
     </modules>
 
     <repositories>
-       <repository>
-           <id>aws-release</id>
-           <name>AWS S3 Release Repository</name>
-           <url>https://s3.amazonaws.com/artifacts.quantezza.com/release</url>
+      <repository>
+         <id>bintray</id>
+         <url>http://dl.bintray.com/quantiply/quantiply</url>
        </repository>
     </repositories>
-    
+
     <distributionManagement>
-        <repository>
-            <id>aws-release</id>
-            <name>AWS Release Repository</name>
-            <url>s3://artifacts.quantezza.com/release</url>
-        </repository>
+      <repository>
+        <id>bintray-quantiply-quantiply</id>
+        <name>quantiply-quantiply</name>
+        <url>https://api.bintray.com/maven/quantiply/quantiply/confluent-common</url>
+      </repository>
     </distributionManagement>
 
     <dependencyManagement>
@@ -99,13 +98,6 @@
     </dependencyManagement>
 
     <build>
-        <extensions>
-            <extension>
-                <groupId>org.kuali.maven.wagons</groupId>
-                <artifactId>maven-s3-wagon</artifactId>
-                <version>1.2.1</version>
-            </extension>
-        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -24,7 +24,7 @@
     <parent>
         <artifactId>common</artifactId>
         <groupId>io.confluent</groupId>
-        <version>1.0-q2</version>
+        <version>1.0-q5</version>
     </parent>
 
     <properties>
